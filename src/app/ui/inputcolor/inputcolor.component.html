@@ -1,0 +1,20 @@
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2" style="margin-top: 29%;"> 
+                <form name="form"  #f="ngForm" >
+                    <div class="form-group">
+                        <p><b style="margin-top: 6px;">Hex Code:</b></p>
+                        <input type="text" (keyup)="onChange()" class="form-control" name="HexCode" [pattern]="regex" [(ngModel)]="model.HexCode" #HexCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted || HexCode.invalid }" required >
+                        <div *ngIf="f.submitted || HexCode.invalid" class="invalid-feedback">
+                            <div *ngIf="HexCode?.errors?.pattern">Hex Code is invalid</div> 
+                            <div *ngIf="HexCode?.errors?.required">Hex Code is required</div>
+                        </div>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ 

@@ -1,0 +1,18 @@
+input.ng-invalid.ng-touched  
+{  
+   border-color: red;
+} 
+.row {
+   --bs-gutter-x: 20.5rem; 
+}
+label {
+   margin-top: 300px;
+ }
+ b, strong {
+   margin-left: -85px;
+   position: absolute;
+} 
+
+.offset-md-2 {
+    margin-left: 20%;
+}
